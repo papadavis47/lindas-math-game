@@ -24,6 +24,18 @@ header {
   padding: 1px;
   background-color: #70a1ff;
   text-align: center;
+  text-shadow: 0 1px 0 #ccc,
+    0 2px 0 #c9c9c9,
+    0 3px 0 #bbb,
+    0 4px 0 #b9b9b9,
+    0 5px 0 #aaa,
+    0 6px 1px rgba(0,0,0,.1),
+    0 0 5px rgba(0,0,0,.1),
+    0 1px 3px rgba(0,0,0,.3),
+    0 3px 5px rgba(0,0,0,.2),
+    0 5px 10px rgba(0,0,0,.25),
+    0 10px 10px rgba(0,0,0,.2),
+    0 20px 20px rgba(0,0,0,.15);
 }
 
 h1 {
@@ -110,14 +122,48 @@ a:visited {
 /*--------------------------------------Classes & IDs for Hide-2--------------------------------*/
 
 
+#hide-2 {
+  width: 80%;
+  height: 30em;
+  margin: 0 auto;
+  border: 2px solid #2f3542;
+  box-shadow: 12px 15px 5px #2f3542;
+  background-color: #7bed9f;
+  position: relative;
+  top: 3em;
+  bottom: 1em;
+  border: 3px solid black;
+  display: none;
+  
+}
+
+.choice {
+  text-align: center;
+  font-size: 8em;
+  margin: 1rem;
+}
+
+.choice p {
+  text-align: center;
+  padding-top: 2rem;
+  font-size: 2rem;
+  color: white;
+  font-weight: bold;
+}
+
+.svg {
+  font-size: 8rem;
+  display: inline-block;
+  cursor: pointer;
+}
+
 
 /* ------------------------------------Classes & IDs for Hide-3 -----------------------------------*/
 
 #hide-3 {
   text-align: center;
+  display: none;
   
-
-  /* border: 2px solid black;  */
 }
 
 #answer {
@@ -127,9 +173,13 @@ a:visited {
 }
 
 #submit {
-  width: 120px;
-  height: 30px;
+  width: 300px;
+  height: 70px;
   margin-top: 1em;
+  background-color: #70a1ff;
+  font-size: 1em;
+  color: white;
+  font-weight: 600;
 }
 
 .flashcard {
@@ -149,11 +199,12 @@ a:visited {
   background-color: white;
   color: #2f3542;
   display: inline-block;
-  margin-top: 2em;
+  margin-top: 1em;
 }
 
-h2 {
+.score-box h2 {
   margin: auto;
+  padding-top: .75em;
 }
 
 .update-score {
@@ -161,6 +212,12 @@ h2 {
   margin-bottom: 2em;
 }
 
+.update-score h3{
+  padding: 0;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  color: white;
+}
 
 
 /*------------------------------------------ ID Selectors ------------------------------------------*/
@@ -186,4 +243,5 @@ h2 {
   position: relative;
   padding-bottom: 100px;
 }
+
 
