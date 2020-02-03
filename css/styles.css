@@ -2,6 +2,8 @@
   box-sizing: border-box;
 } */
 
+/* ---------------------------------- Elements --------------------------------------*/
+
 html,
 body {
   margin: 0;
@@ -65,7 +67,7 @@ a:visited {
   text-decoration: none;
 }
 
-
+/* --------------------------------- Classes  & IDs for Hide-1-------------------------------------*/
 
 .the-canvas {
   padding: 1px;
@@ -92,10 +94,6 @@ a:visited {
   line-height: 2em;
 }
 
-.directions button {
-  text-align: center;
-}
-
 #hide-1 {
   width: 80%;
   height: 30em;
@@ -106,19 +104,79 @@ a:visited {
   position: relative;
   top: 3em;
   bottom: 1em;
+  display: none;
 }
+
+/*--------------------------------------Classes & IDs for Hide-2--------------------------------*/
+
+
+
+/* ------------------------------------Classes & IDs for Hide-3 -----------------------------------*/
+
+#hide-3 {
+  text-align: center;
+  
+
+  /* border: 2px solid black;  */
+}
+
+#answer {
+  width: 120px;
+  height: 30px;
+  margin-top: 2em;
+}
+
+#submit {
+  width: 120px;
+  height: 30px;
+  margin-top: 1em;
+}
+
+.flashcard {
+  width: 60%;
+  height: 20em;
+  background-color: white;
+  color: #2f3542;
+  border: 5px solid #a4b0be;
+  margin-top: 3em;
+  /* margin: 0 auto; */
+  display: inline-block;
+}
+
+.score-box {
+  width: 8em;
+  height: 5em;
+  background-color: white;
+  color: #2f3542;
+  display: inline-block;
+  margin-top: 2em;
+}
+
+h2 {
+  margin: auto;
+}
+
+.update-score {
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+
+
+/*------------------------------------------ ID Selectors ------------------------------------------*/
+
 
 #github {
   padding: 1px;
   /* inline;display:  */
   padding-bottom: 2em;
-  font-size: 1.5em;
+  font-size: 1.25em;
   
 }
 
 #story {
 
-  font-size: 1.5em;
+  font-size: 1.25em;
 }
 
 #wrapper {

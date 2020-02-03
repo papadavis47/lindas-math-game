@@ -8,6 +8,10 @@
       href="https://fonts.googleapis.com/css?family=Lora&display=swap"
       rel="stylesheet"
     />
+    <script
+      src="https://kit.fontawesome.com/32d47eeaf5.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="css/styles.css" />
     <title>Linda's Math Game</title>
   </head>
@@ -22,9 +26,8 @@
             <div class="directions">
               <h2>Welcome to my math game!</h2>
               <p>
-                You can choose to do addition, subtraction, multiplication or
-                division. For every answer you get right, you will gain 5
-                points.
+                You can do addition, subtraction, multiplication or division.
+                For every answer you get right, you will gain 5 points.
               </p>
               <p>
                 For every incorrect answer you will lose 5 points - but you can
@@ -33,33 +36,37 @@
               </p>
 
               <p>Which ever you choose is okay. You will learn something!</p>
-              <p>Click anywhere outside this box to get started!</p>
-            </div>
-            
-            <div class="choice">
-              <!-- I'll place some font awesome stuff here -->
+              <p>Click anywhere in this box to get started!</p>
             </div>
           </div>
         </section>
         <!-- The following will be my main play after I hide the "splash screen" div -->
-        <!-- <section id="hide-2">
-        <div class="flashcard">
-          <h2 class="challenge"></h2>
-        </div>
-        <form action="">
-          <input type="text" />
-        </form>
-        <button>Click Here to Submit</button>
-      </section>
-      End of hidden area -->
-        <div class="score-box">
-          <h3 class="display-score"></h3>
-        </div>
+        <section id="hide-2">
+          <div class="choice">
+            <!-- I'll place some font awesome stuff in here -->
+          </div>
+        </section>
+        <section id="hide-3">
+          <div class="flashcard">
+            <h2 class="challenge">Testing</h2>
+          </div>
+          <form action="">
+            <input type="text" id="answer" />
+          </form>
+          <button id="submit">Answer and Click</button>
+          <div class="update-score">
+            <div class="score-box">
+              <h2 class="display-score">20</h2>
+            </div>
+          </div>
+        </section>
       </main>
       <footer>
         <ul>
           <li id="story"><a href="#">About This Game</a></li>
-          <li id="github"><a href="https://github.com/papadavis47/lindas-math-game">GitHub</a></li>
+          <li id="github">
+            <a href="https://github.com/papadavis47/lindas-math-game">GitHub</a>
+          </li>
         </ul>
       </footer>
     </div>
