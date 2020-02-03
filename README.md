@@ -8,7 +8,6 @@ I want to create a math game for second / third graders. Using a flashcard type 
 
 * HTML5 & CSS*
 * JavaScript
-* jQuery
 
 
 ## My MVP

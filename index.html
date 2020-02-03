@@ -12,28 +12,25 @@
     <title>Linda's Math Game</title>
   </head>
   <body>
-    <header>
-      <h1>Linda's Math Game</h1>
-      <nav>
-        <ul>
-          <li>Go Back To The Beginning</li>
-          <li>About This Game</li>
-        </ul>
-      </nav>
-    </header>
-    <main class="wrapper" id="the-canvas">
-      <section id="hide-1">
-        <div class="splash-screen">
-          <div class="directions">
-            <p>Directions will go here.</p>
+    <div id="wrapper">
+      <header>
+        <h1>Linda's Math Game</h1>
+      </header>
+      <main id="the-canvas">
+        <section id="hide-1">
+          <div class="splash-screen">
+            <div class="directions">
+              <h2>Welcome to our math game!</h2>
+              <p>You can choose to do addition, subtraction, multiplication or division. For every answer you get right, you will gain 5 points. For every incorrect answer you will lose 5 points, but you can choose to see the answer or you can choose to try again for more points. Whichever you choose is okay. You will learn something!</p>
+              <p>Click below to get started and you will see your options!</p>
+            </div>
+            <div class="choice">
+              <!-- I'll place some font awesome stuff here -->
+            </div>
           </div>
-          <div class="choice">
-            <!-- I'll place some font awesome stuff here -->
-          </div>
-        </div>
-      </section>
-      <!-- The following will be my main play after I hide the "splash screen" div -->
-      <!-- <section id="hide-2">
+        </section>
+        <!-- The following will be my main play after I hide the "splash screen" div -->
+        <!-- <section id="hide-2">
         <div class="flashcard">
           <h2 class="challenge"></h2>
         </div>
@@ -43,12 +40,16 @@
         <button>Click Here to Submit</button>
       </section>
       End of hidden area -->
-      <div class="score-box">
-        <h3 class="display-score"></h3>
-      </div>
-    </main>
-    <footer>
-      <p>GitHub</p>
-    </footer>
+        <div class="score-box">
+          <h3 class="display-score"></h3>
+        </div>
+      </main>
+      <footer>
+        <p><a id="story" href="#">About This Game</a></p>
+        <p id="github">
+          <a href="https://github.com/papadavis47/lindas-math-game">GitHub</a>
+        </p>
+      </footer>
+    </div>
   </body>
 </html>

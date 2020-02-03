@@ -1,26 +1,108 @@
-* {
-    margin: 0 auto;
-    box-sizing: border-box;
+/* * {
+  box-sizing: border-box;
+} */
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  height: 100%;
+  position: relative;
+  
 }
 
 body {
-    font-family: 'Lora', serif;
-    background-color: #ff7f50;
-    color: #ffffff;
+  color: #ffffff;
+  background-color: #ff7f50;
+  font-family: "Lora", serif;
 }
 
 header {
-    background-color: #5352ed;
-    text-align: center;
+  padding: 1px;
+  background-color: #5352ed;
+  text-align: center;
 }
 
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+h1 {
+  font-size: 3em;
+  text-transform: uppercase;
 }
 
-li {
-    display: inline;
-    padding-left: 1em;
+h2 {
+  font-size: 2em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+footer {
+  background-color: #5352ed;
+  padding: 1px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 75px;
+  text-align: center;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+.directions p {
+  font-size: 1.25em;
+}
+
+.the-canvas {
+  padding: 1px;
+}
+
+.splash-screen {
+  width: 100%;
+  height: 100%;
+  /* margin: 0 auto; */
+  padding: 1px;
+}
+
+.directions {
+  color: white;
+  width: 70%;
+  text-align: justify;
+  margin: 0 auto;
+}
+
+#hide-1 {
+  width: 80%;
+  height: 30em;
+  margin: 0 auto;
+  border: 2px solid #2f3542;
+  box-shadow: 12px 15px 5px #2f3542;
+  background-color: #ff6b81;
+  position: relative;
+  top: 3em;
+  bottom: 1em;
+}
+
+#github {
+  padding: 1px;
+  display: inline;
+  padding: bottom;
+}
+
+#story {
+  display: inline;
+}
+
+#wrapper {
+  min-height: 100vh; /* will cover the 100% of viewport */
+  overflow: hidden;
+  display: block;
+  position: relative;
+  padding-bottom: 75px;
 }
