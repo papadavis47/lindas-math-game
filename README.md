@@ -1,3 +1,5 @@
+![Educational/Game](https://img.shields.io/badge/Educational-Game-9cf)
+
 # Basic Game Idea - "Linda's Math Game"
 
 I want to create a math game for second / third graders. Using a flashcard type system, but with an interesting interface that engages learning.

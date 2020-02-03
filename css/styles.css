@@ -1,3 +1,26 @@
 * {
     margin: 0 auto;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lora', serif;
+    background-color: #ff7f50;
+    color: #ffffff;
+}
+
+header {
+    background-color: #5352ed;
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    display: inline;
+    padding-left: 1em;
 }
