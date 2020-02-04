@@ -50,6 +50,10 @@ document.addEventListener("DOMContentLoaded", function(e) {
   let hide3 = document.getElementById("hide-3");
   let splashScreen = document.getElementsByClassName("splash-screen");
 
+  hide1.addEventListener("mouseenter", (e) =>  {
+    document.getElementById("math-game").play();
+  })
+
   hide1.addEventListener("click", function(e) {
     hide1.style.display = "none";
     hide2.style.display = "block";
