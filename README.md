@@ -26,7 +26,7 @@ After the user types in the answer it will either display that the answer was co
 
 Either way, there will be a button to click to move onto the next question.
 
-There will be a point system *( maybe 5 points per question)* where the user can earn 5 points per right answer and will decrement 5 points per wrong question. Once a certain number of points are earned *( maybe 100 points )* the user will win.
+There will be a point system *( maybe 5 points per question)* where the user can earn 5 points per right answer and will decrement 5 points per wrong question. Once a certain number of points are earned *( maybe 50 points )* the user will win.
 
 There is no "lose" condition - only communicating to the user if their answer is incorrect. 
 
