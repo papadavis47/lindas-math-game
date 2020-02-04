@@ -188,11 +188,20 @@ a:visited {
   width: 60%;
   height: 20em;
   background-color: white;
-  color: #2f3542;
+  color: blue;
   border: 5px solid #a4b0be;
   margin-top: 3em;
   /* margin: 0 auto; */
   display: inline-block;
+  text-align: center;
+}
+
+.challenge {
+  padding-top: .75rem;
+  font-size: 6.5rem;
+  text-transform: lowercase;
+  
+
 }
 
 .score-box {
