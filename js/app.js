@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function(e) {
   let hide3 = document.getElementById("hide-3");
   let splashScreen = document.getElementsByClassName("splash-screen");
 
-  hide1.addEventListener("mouseenter", (e) =>  {
+  hide1.addEventListener("mouseleave", (e) =>  {
     document.getElementById("math-game").play();
   })
 
