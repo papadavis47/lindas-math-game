@@ -182,6 +182,10 @@ a:visited {
   font-size: 2em;
 }
 
+#next {
+  display: none;
+}
+
 form {
   text-align: center;
 }

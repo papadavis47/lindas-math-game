@@ -185,7 +185,7 @@ const questions = {
 let score = 0;
 let currentChallenge = null;
 let currentQuestIndex = 0;
-
+let winner = false;
 
 
 
@@ -193,12 +193,13 @@ let currentQuestIndex = 0;
 // This is what happens when someone wins game
 
 function gameIsWon() {
-
+ console.log("This is what happens when 50 points are reached.");
 }
 
 // This is the bulk of the game play here:
 
 function gamePlay() {
+  console.log("This is the funct for the bulk of the play.")
 
   
 }
@@ -206,6 +207,7 @@ function gamePlay() {
 
 function startAgain() {
   score = 0;
+  currentQuestIndex = 0;
   hide1.style.display = "block";
   hide2.style.display = "none";
   hide3.style.display = "none";
@@ -230,6 +232,8 @@ document.addEventListener("DOMContentLoaded", function(e) {
   const hide2 = document.getElementById("hide-2");
   // this is the play area
   const hide3 = document.getElementById("hide-3");
+
+  const newQuestion = document.getElementById("next");
   
   
   displayScore.innerText = score;
@@ -289,15 +293,54 @@ document.addEventListener("DOMContentLoaded", function(e) {
       // if input is wrong
     } else {
       // I will display message "Close, try again later"
-      challenge.innerText = "Close, try again later.";
-      // and decrement the score by 5 points then move on to next one
-      score -= 5;
-    }
-    currentQuestIndex +=1;
+      challenge.innerText = "Good Try!";
       
-    console.log(attempt.value);
+      // and decrement the score by 5 points
+      score -= 5;
+      
+    }
+    newQuestion.style.display = "inline-block";
+    currentQuestIndex +=1;
+    displayScore.innerText = score;
+
+    if (score >= 50) {
+      // TODO: figure out all win actions
+      winner = true;
+      challenge.innerText = "You are a winner!!";
+    } 
+    
+    
   });
+  
+  // pause for minimum of 3 seconds and move on to next question 
+
+    // but if score reaches 50 display winning message
+  
+  newQuestion.addEventListener("click", function(e) {
+    console.log('clicking on', e.target.id);
+    if (currentQuestIndex < currentChallenge.length && winner != true) {
+      console.log('next and ready')
+      newQuestion.style.display = "none";
+      challenge.innerText = currentChallenge[currentQuestIndex].problem;
+    } else {
+      newQuestion.style.display = "inline-block";
+      console.log('bye')
+      hide3.style.display = "none";
+      hide2.style.display = "block";
+    }
+  })
+
 
 });
 
+// possible code to fit in as follows: 
   
+// function nextQuestion() {
+//   if (currentQuestIndex < currentChallenge.length) {
+//     challenge.innerText = currentChallenge[currentQuestIndex].problem;
+//   }
+// }
+
+// then:
+
+// setTimeout(nextQuestion, 3000);

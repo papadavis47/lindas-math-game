@@ -6,7 +6,7 @@ I want to create a math game for second / third graders. Using a flashcard type 
 
 ## Tech Used
 
-* HTML5 & CSS*
+* HTML5 & CSS
 * JavaScript
 
 
@@ -22,9 +22,6 @@ The game will display math problems and the user will type in the answer *(numbe
 
 There will be different sound depending on whether the user types in a correct answer.
 
-After the user types in the answer it will either display that the answer was correct or incorrect - then it will ask if they want to see the answer to the question. They can choose to see the answer or not.
-
-Either way, there will be a button to click to move onto the next question.
 
 There will be a point system *( maybe 5 points per question)* where the user can earn 5 points per right answer and will decrement 5 points per wrong question. Once a certain number of points are earned *( maybe 50 points )* the user will win.
 
@@ -39,6 +36,10 @@ There is no "lose" condition - only communicating to the user if their answer is
 * Incorporate short, inspirational quotes from various female mathematicians and computer scientists, programmers, venture capitalists - whatever I can find.
 
 * Increase the number of math problems per "choice", multiplication, division, etc.
+
+* After the user types in the answer it will either display that the answer was correct or incorrect - then it will ask if they want to see the answer to the question. They can choose to see the answer or not.
+
+* Either way, there will be a button to click to move onto the next question.
 
 * Find a way to work with an API of some kind - in some way
 
