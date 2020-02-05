@@ -96,7 +96,7 @@ const questions = {
       answer: 15
     }
   ],
-  mutliplication: [
+  multiplication: [
     {
       problem: "5 X 5 = ",
       answer: 25
@@ -183,30 +183,11 @@ const questions = {
   ]
 }
 
+let score = 0;
 
 
 
 
-
-
-
- // the folllowing is how I choose which arr to use for my "math problems"
-
- 
-
-
-// function chooseGame() {
-  
-//       if (e.target.id === "plus") {
-//         currentChallenge = questions[addition];
-//       } else if (e.target.id === "minus") {
-//         currentChallenge = questions[subtraction];
-//       } else if (e.target.id === "multiply") {
-//         currentChallenge = questions[multiplication];
-//       } else if (e.target.id === "divide") {
-//         currentChallenge = questions[division];
-//       }
-//     }
 
 // This is what happens when someone wins game
 
@@ -217,10 +198,10 @@ function gameIsWon() {
 // This is the bulk of the game play here:
 
 function gamePlay() {
-  for (item in arr) {
+  for (item in currentChallenge) {
     if (score < 50) {
-      challenge.innerText = arr[item].problem;
-      if (attempt === arr[item].answer) {
+      challenge.innerText = currentChalleng[item].problem;
+      if (attempt === currentChallenge[item].answer) {
         challenge.innerText = "Good, that's right!";
         score += 5;
       } else {
@@ -248,25 +229,30 @@ function startAgain() {
 // I found out I need to declare my variables within DOMCONTENT - function
 
 document.addEventListener("DOMContentLoaded", function(e) {
-  let score = 0;
-  let currentChallenge = null;
+  
   const challenge = document.querySelector(".challenge");
   const choices = document.querySelector(".choices");
-  let displayScore = document.getElementById("display-score");
+  const displayScore = document.getElementById("display-score");
   const attempt = document.getElementById("attempt");
-  let hide1 = document.getElementById("hide-1");
-  let hide2 = document.getElementById("hide-2");
-  let hide3 = document.getElementById("hide-3");
+  const hide1 = document.getElementById("hide-1");
+  const hide2 = document.getElementById("hide-2");
+  const hide3 = document.getElementById("hide-3");
+  
   
   
 
   displayScore.innerText = score;
 
   // opening sound - "You should play a math game."
-  hide1.addEventListener("mouseleave", (e) => {
+  hide1.addEventListener("mouseenter", function(e) {
     document.getElementById("math-game").play();
-    e.preventDefault();
+    // hide1.removeEventListener("mouseenter", function(e) {
+    //   document.getElementById("math-game").play();
+      
+    // });
   });
+
+  
 
   // initial click event listener after the directions intro
   hide1.addEventListener("click", function(e) {
@@ -274,15 +260,29 @@ document.addEventListener("DOMContentLoaded", function(e) {
     hide2.style.display = "block";
   });
 
+  hide2.addEventListener("mouseenter", function(e) {
+    document.getElementById("pick-one").play();
+    
+
+  })
+
   
     choices.addEventListener("click", function(e) {
       hide2.style.display = "none";
       hide3.style.display = "block";
-      console.log('picked ', e.target);
-      console.log("my id is:", e.target.id)
-
-      
+      let currentChallenge = questions[`${e.target.id}`];
+      console.log(currentChallenge);
+      for (item in currentChallenge) {
+        console.log(currentChallenge[item].problem)
+      }
     })
+
+    console.log(attempt.value);
+    
+      
+      
+      
+
   
  
     

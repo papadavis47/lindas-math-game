@@ -179,6 +179,7 @@ a:visited {
   margin-top: 2em;
   display: inline-block;
   text-align: center;
+  font-size: 2em;
 }
 
 form {
@@ -187,9 +188,8 @@ form {
 
 #submit {
   width: 320px;
-  height: 70px;
-  margin-top: .5em;
-  background-color: #70a1ff;
+  height: 80px;
+  background-color: #2bcbba;
   font-size: .9em;
   color: white;
   font-weight: 600;
