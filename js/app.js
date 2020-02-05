@@ -47,7 +47,6 @@ const questions = {
   
     { problem: "32 + 14 =", answer: 46 }
   ],
-
   subtraction: [
     {
       problem: "32 - 12 =",
@@ -141,49 +140,51 @@ const questions = {
   ],
   division: [
     {
-      problem: "9 &#10135; 3 =",
+      problem: "9 / 3 =",
       answer: 3
     },
     {
-      problem: "8 &#10135; 2 =",
+      problem: "8 / 2 =",
       answer: 4
     },
     {
-      problem: "12 &#10135; 6 =",
+      problem: "12 / 6 =",
       answer: 2
     },
     {
-      problem: "10 &#10135; 2 =",
+      problem: "10 / 2 =",
       answer: 5
     },
     {
-      problem: "16 &#10135; 3 =",
+      problem: "16 / 3 =",
       answer: 8
     },
     {
-      problem: "14 &#10135; 2 =",
+      problem: "14 / 2 =",
       answer: 8
     },
     {
-      problem: "19 &#10135; 19 =",
+      problem: "19 / 19 =",
       answer: 1
     },
     {
-      problem: "30 &#10135; 5 =",
+      problem: "30 / 5 =",
       answer: 6
     },
     {
-      problem: "28 &#10135; 4 =",
+      problem: "28 / 4 =",
       answer: 7
     },
     {
-      problem: "21 &#10135; 7 =",
+      problem: "21 / 7 =",
       answer: 3
     }
   ]
 }
 
 let score = 0;
+let currentChallenge = null;
+let currentQuestIndex = 0;
 
 
 
@@ -198,27 +199,10 @@ function gameIsWon() {
 // This is the bulk of the game play here:
 
 function gamePlay() {
-  for (item in currentChallenge) {
-    if (score < 50) {
-      challenge.innerText = currentChalleng[item].problem;
-      if (attempt === currentChallenge[item].answer) {
-        challenge.innerText = "Good, that's right!";
-        score += 5;
-      } else {
-        score -= 5;
-        challenge.innerText =
-          'Not quite. To see answer Type "Y"\n To move on type "N".';
-        if (attempt.toUpperCase() === "Y") {
-          challenge.innerText = arr[item].answer;
-        } else {
-          continue;
-        }
-      }
-    } else {
-      gameIsWon();
-    }
-  }
-};
+
+  
+}
+    
 
 function startAgain() {
   score = 0;
@@ -226,24 +210,32 @@ function startAgain() {
   hide2.style.display = "none";
   hide3.style.display = "none";
 }
-// I found out I need to declare my variables within DOMCONTENT - function
+// Most everything will go under here
 
 document.addEventListener("DOMContentLoaded", function(e) {
   
+  // this is the h2 where I send in the math problem
   const challenge = document.querySelector(".challenge");
+  // this is the div holding the elements where user clicks to choose math type
   const choices = document.querySelector(".choices");
+  // this is the h2 displaying the score that will be updated
   const displayScore = document.getElementById("display-score");
-  const attempt = document.getElementById("attempt");
+  // this is my form entirely
+  const mainForm = document.getElementById("attempt");
+  // this is the input field
+  const attempt = document.getElementById("input");
+  // this is the section div with my info screen and directions
   const hide1 = document.getElementById("hide-1");
+  // this is the section div where user chooses math type
   const hide2 = document.getElementById("hide-2");
+  // this is the play area
   const hide3 = document.getElementById("hide-3");
   
   
-  
-
   displayScore.innerText = score;
 
   // opening sound - "You should play a math game."
+
   hide1.addEventListener("mouseenter", function(e) {
     document.getElementById("math-game").play();
     // hide1.removeEventListener("mouseenter", function(e) {
@@ -258,38 +250,54 @@ document.addEventListener("DOMContentLoaded", function(e) {
   hide1.addEventListener("click", function(e) {
     hide1.style.display = "none";
     hide2.style.display = "block";
+    console.log(e.target);
   });
-
+  // another sound on the pick screen - "Go ahead and pick one"
   hide2.addEventListener("mouseenter", function(e) {
     document.getElementById("pick-one").play();
-    
-
-  })
-
-  
-    choices.addEventListener("click", function(e) {
-      hide2.style.display = "none";
-      hide3.style.display = "block";
-      let currentChallenge = questions[`${e.target.id}`];
-      console.log(currentChallenge);
-      for (item in currentChallenge) {
-        console.log(currentChallenge[item].problem)
-      }
-    })
-
-    console.log(attempt.value);
-    
-      
-      
-      
-
-  
- 
-    
-    // attempt.addEventListener("submit", function(e) {
-    //   e.preventDefault();
-
-    // })
-
-    
   });
+
+  
+  choices.addEventListener("click", function(e) {
+    // after user clicks on type of math -  
+    // screen will change to flashcard  
+    hide2.style.display = "none";
+    hide3.style.display = "block";
+    // current challenge will be changed to whatever the user clicks
+    currentChallenge = questions[e.target.id];
+    
+    // first question will come up
+    
+    // get first index of currentChallenge
+    // update the innner text of h2 that will hold questions with string from first index at currentChallenge[0].problem
+    challenge.innerText = currentChallenge[0].problem;
+  });
+  
+  // user will submit their answer 
+  mainForm.addEventListener("submit", function(e) {
+    
+    e.preventDefault();
+    console.log("testing");
+    // compare user input against answer in currentChallenge[0].answer
+    // if input and answer are match, 
+    // let answer = attempt.value;
+    if (attempt.value == currentChallenge[currentQuestIndex].answer) {
+      // then I will display message 
+      challenge.innerText = "Good, that's right!";
+      //  and increment score +5
+      score += 5;
+      // if input is wrong
+    } else {
+      // I will display message "Close, try again later"
+      challenge.innerText = "Close, try again later.";
+      // and decrement the score by 5 points then move on to next one
+      score -= 5;
+    }
+    currentQuestIndex +=1;
+      
+    console.log(attempt.value);
+  });
+
+});
+
+  
