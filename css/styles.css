@@ -139,13 +139,8 @@ a:visited {
   
 }
 
-.choice {
-  text-align: center;
-  font-size: 8em;
-  margin: 1rem;
-}
 
-.choice p {
+.choices p {
   text-align: center;
   padding-top: 2rem;
   font-size: 2rem;
@@ -153,10 +148,20 @@ a:visited {
   font-weight: bold;
 }
 
-.svg {
-  font-size: 8rem;
+.choice-container {
   display: inline-block;
+  
+}
+.choices h1 {
+  text-transform: lowercase;
+}
+
+.choice {
+  font-size: 7rem;
+  display: inline;
   cursor: pointer;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 
 
@@ -168,18 +173,24 @@ a:visited {
   
 }
 
-#answer {
+#attempt {
   width: 120px;
-  height: 30px;
+  height: 60px;
   margin-top: 2em;
+  display: inline-block;
+  text-align: center;
+}
+
+form {
+  text-align: center;
 }
 
 #submit {
-  width: 300px;
+  width: 320px;
   height: 70px;
-  margin-top: 1em;
+  margin-top: .5em;
   background-color: #70a1ff;
-  font-size: 1em;
+  font-size: .9em;
   color: white;
   font-weight: 600;
 }

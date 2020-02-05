@@ -50,22 +50,22 @@
         </section>
         <!-- The following will be my main play after I hide the "splash screen" div -->
         <section id="hide-2">
-          <div class="choice">
+          <div class="choices">
             <p>
               Pick from plus, minus, multiplication or division. Click to
               choose:
             </p>
-            <div class="svg" id="plus">
-              <i class="fas fa-plus" id="plus"></i>
+            <div class="choice-container">
+              <h1 class="choice" id="add">+</h1>
             </div>
-            <div class="svg" id="minus">
-              <i class="fas fa-minus" id="minus"></i>
+            <div class="choice-container" >
+              <h1 class="choice" id="subtract">-</h1>
             </div>
-            <div class="svg" id="multiply">
-              <i class="fas fa-times" id="multiplication"></i>
+            <div class="choice-container">
+              <h1 class="choice" id="multiply">x</h1>
             </div>
-            <div class="svg" id="divide">
-              <i class="fas fa-divide" id="division"></i>
+            <div class="choice-container">
+              <h1 class="choice" id="divide">&#10135;</h1>
             </div>
             <!--  font awesome stuff above -->
           </div>
@@ -76,8 +76,8 @@
           </div>
           <form action="">
             <input type="text" id="attempt" />
+            <button id="submit">Type Answer In the Box, Then Click Here</button>
           </form>
-          <button id="submit">Answer Above, Then Click Here</button>
           <div class="update-score">
             <h3>See Your Score Below:</h3>
             <div class="score-box">

@@ -195,18 +195,18 @@ const questions = {
  
 
 
-function chooseGame() {
+// function chooseGame() {
   
-      if (e.target.id === "plus") {
-        currentChallenge = questions[addition];
-      } else if (e.target.id === "minus") {
-        currentChallenge = questions[subtraction];
-      } else if (e.target.id === "multiply") {
-        currentChallenge = questions[multiplication];
-      } else if (e.target.id === "division") {
-        currentChallenge = questions[division];
-      }
-    }
+//       if (e.target.id === "plus") {
+//         currentChallenge = questions[addition];
+//       } else if (e.target.id === "minus") {
+//         currentChallenge = questions[subtraction];
+//       } else if (e.target.id === "multiply") {
+//         currentChallenge = questions[multiplication];
+//       } else if (e.target.id === "divide") {
+//         currentChallenge = questions[division];
+//       }
+//     }
 
 // This is what happens when someone wins game
 
@@ -251,19 +251,21 @@ document.addEventListener("DOMContentLoaded", function(e) {
   let score = 0;
   let currentChallenge = null;
   const challenge = document.querySelector(".challenge");
-  const choices = document.querySelectorAll(".svg");
+  const choices = document.querySelector(".choices");
   let displayScore = document.getElementById("display-score");
-  let attempt = document.getElementById("attempt");
+  const attempt = document.getElementById("attempt");
   let hide1 = document.getElementById("hide-1");
   let hide2 = document.getElementById("hide-2");
   let hide3 = document.getElementById("hide-3");
-  let splashScreen = document.getElementsByClassName("splash-screen");
+  
+  
 
   displayScore.innerText = score;
 
   // opening sound - "You should play a math game."
   hide1.addEventListener("mouseleave", (e) => {
     document.getElementById("math-game").play();
+    e.preventDefault();
   });
 
   // initial click event listener after the directions intro
@@ -272,11 +274,22 @@ document.addEventListener("DOMContentLoaded", function(e) {
     hide2.style.display = "block";
   });
 
-  for (let i = 0; i < choices.length; i++) {
-    choices[i].addEventListener("click", e => {
-      console.log('picked ', e.target.id);
+  
+    choices.addEventListener("click", function(e) {
       hide2.style.display = "none";
       hide3.style.display = "block";
-    })  
-  }
-});
+      console.log('picked ', e.target);
+      console.log("my id is:", e.target.id)
+
+      
+    })
+  
+ 
+    
+    // attempt.addEventListener("submit", function(e) {
+    //   e.preventDefault();
+
+    // })
+
+    
+  });
