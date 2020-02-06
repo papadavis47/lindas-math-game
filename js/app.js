@@ -295,7 +295,9 @@ document.addEventListener("DOMContentLoaded", function(e) {
       console.log(currentChallenge[currentQuestIndex].problem)
       // then I will display message 
       challenge.innerText = "Good, that's right!";
+      if (currentQuestIndex < 9) {
       document.getElementById("good-job").play();
+      }
       //  and increment score +5
       score += 5;
       // if input is wrong
@@ -316,6 +318,7 @@ document.addEventListener("DOMContentLoaded", function(e) {
       // TODO: figure out all win actions
       winner = true;
       challenge.innerText = "You are a winner!!";
+      document.getElementById("congrats").play();
     } 
     
     
