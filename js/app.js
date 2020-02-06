@@ -272,12 +272,13 @@ document.addEventListener("DOMContentLoaded", function(e) {
     // note: troubleshooting index resetting. Maybe have to delete following line.
     currentQuestIndex = 0;
     score = 0;
-    
+    displayScore.innerText = score;
+    document.getElementById("input").value = "";
     // first question will come up
     
     // get first index of currentChallenge
     // update the innner text of h2 that will hold questions with string from first index at currentChallenge[0].problem
-    challenge.innerText = currentChallenge[0].problem;
+    challenge.innerText = currentChallenge[currentQuestIndex].problem;
   });
   
   // user will submit their answer 
@@ -324,7 +325,7 @@ document.addEventListener("DOMContentLoaded", function(e) {
     // but if score reaches 50 display winning message
   
   newQuestion.addEventListener("click", function(e) {
-    console.log('clicking on', e.target.id);
+    // console.log('clicking on', e.target.id);
     if (currentQuestIndex < currentChallenge.length && winner != true) {
       console.log('next and ready')
       newQuestion.style.display = "none";
@@ -335,7 +336,8 @@ document.addEventListener("DOMContentLoaded", function(e) {
       console.log('bye')
       hide3.style.display = "none";
       hide2.style.display = "block";
-      currentChallenge = 0;
+      currentQuestIndex = 0;
+      displayScore.innerText = score;
     }
   })
 

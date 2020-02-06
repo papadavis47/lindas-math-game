@@ -1,0 +1,1 @@
+console.log("Page for fun stuff");
