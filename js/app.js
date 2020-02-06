@@ -156,12 +156,12 @@ const questions = {
       answer: 5
     },
     {
-      problem: "16 / 3 =",
+      problem: "16 / 2 =",
       answer: 8
     },
     {
       problem: "14 / 2 =",
-      answer: 8
+      answer: 7
     },
     {
       problem: "19 / 19 =",
@@ -188,8 +188,6 @@ let currentQuestIndex = 0;
 let winner = false;
 
 
-
-
 // This is what happens when someone wins game
 
 function gameIsWon() {
@@ -198,11 +196,11 @@ function gameIsWon() {
 
 // This is the bulk of the game play here:
 
-function gamePlay() {
-  console.log("This is the funct for the bulk of the play.")
+// function gamePlay() {
+//   console.log("This is the funct for the bulk of the play.")
 
   
-}
+// }
     
 
 function startAgain() {
@@ -232,7 +230,7 @@ document.addEventListener("DOMContentLoaded", function(e) {
   const hide2 = document.getElementById("hide-2");
   // this is the play area
   const hide3 = document.getElementById("hide-3");
-
+  // this is the button to move on to the next problem
   const newQuestion = document.getElementById("next");
   
   
@@ -274,6 +272,7 @@ document.addEventListener("DOMContentLoaded", function(e) {
     score = 0;
     displayScore.innerText = score;
     document.getElementById("input").value = "";
+    winner = false;
     // first question will come up
     
     // get first index of currentChallenge
@@ -296,12 +295,14 @@ document.addEventListener("DOMContentLoaded", function(e) {
       console.log(currentChallenge[currentQuestIndex].problem)
       // then I will display message 
       challenge.innerText = "Good, that's right!";
+      document.getElementById("good-job").play();
       //  and increment score +5
       score += 5;
       // if input is wrong
     } else {
       // I will display message "Close, try again later"
       challenge.innerText = "Good Try!";
+      document.getElementById("try-again").play();
       
       // and decrement the score by 5 points
       score -= 5;
