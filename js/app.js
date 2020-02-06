@@ -269,6 +269,9 @@ document.addEventListener("DOMContentLoaded", function(e) {
     hide3.style.display = "block";
     // current challenge will be changed to whatever the user clicks
     currentChallenge = questions[e.target.id];
+    // note: troubleshooting index resetting. Maybe have to delete following line.
+    currentQuestIndex = 0;
+    score = 0;
     
     // first question will come up
     
@@ -286,6 +289,10 @@ document.addEventListener("DOMContentLoaded", function(e) {
     // if input and answer are match, 
     // let answer = attempt.value;
     if (attempt.value == currentChallenge[currentQuestIndex].answer) {
+      console.log(currentQuestIndex)
+      console.log(currentChallenge[currentQuestIndex])
+      console.log(currentChallenge[currentQuestIndex].answer)
+      console.log(currentChallenge[currentQuestIndex].problem)
       // then I will display message 
       challenge.innerText = "Good, that's right!";
       //  and increment score +5
@@ -322,11 +329,13 @@ document.addEventListener("DOMContentLoaded", function(e) {
       console.log('next and ready')
       newQuestion.style.display = "none";
       challenge.innerText = currentChallenge[currentQuestIndex].problem;
+      document.getElementById("input").value = "";
     } else {
       newQuestion.style.display = "inline-block";
       console.log('bye')
       hide3.style.display = "none";
       hide2.style.display = "block";
+      currentChallenge = 0;
     }
   })
 
