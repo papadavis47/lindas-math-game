@@ -190,9 +190,9 @@ let winner = false;
 
 // This is what happens when someone wins game
 
-function gameIsWon() {
- console.log("This is what happens when 50 points are reached.");
-}
+// function gameIsWon() {
+//  console.log("This is what happens when 50 points are reached.");
+// }
 
 // This is the bulk of the game play here:
 
@@ -203,14 +203,14 @@ function gameIsWon() {
 // }
     
 
-function startAgain() {
-  score = 0;
-  currentQuestIndex = 0;
-  hide1.style.display = "block";
-  hide2.style.display = "none";
-  hide3.style.display = "none";
-}
-// Most everything will go under here
+// function startAgain() {
+//   score = 0;
+//   currentQuestIndex = 0;
+//   hide1.style.display = "block";
+//   hide2.style.display = "none";
+//   hide3.style.display = "none";
+// }
+// // Most everything will go under here
 
 document.addEventListener("DOMContentLoaded", function(e) {
   
@@ -274,6 +274,8 @@ document.addEventListener("DOMContentLoaded", function(e) {
     score = 0;
     displayScore.innerText = score;
     document.getElementById("input").value = "";
+    document.getElementById("input").focus();
+
     winner = false;
     // first question will come up
     
@@ -336,8 +338,7 @@ document.addEventListener("DOMContentLoaded", function(e) {
       newQuestion.style.display = "none";
       challenge.innerText = currentChallenge[currentQuestIndex].problem;
       document.getElementById("input").value = "";
-      // document.getElementById("input").autofocus;
-      // document.getElementById("attempt").autofocus;
+      document.getElementById("input").focus();
     } else {
       newQuestion.style.display = "inline-block";
       console.log('bye')
