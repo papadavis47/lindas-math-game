@@ -292,8 +292,8 @@ form {
 /*-------------------------------------About Section--------------------------------------------*/
 
 #linda {
-  width: 800px;
-  height: 800px;
+  width: 700px;
+  height: 700px;
   margin: 0 auto;
   margin-top: 40px;
 }
@@ -319,4 +319,9 @@ form {
 .footer-links {
   font-size: 1rem;
   font-weight: bold;
+}
+
+.about-message {
+  font-size: 20px;
+  font-weight: 600;
 }
