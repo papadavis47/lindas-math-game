@@ -240,10 +240,6 @@ document.addEventListener("DOMContentLoaded", function(e) {
 
   hide1.addEventListener("mouseenter", function(e) {
     document.getElementById("math-game").play();
-    // hide1.removeEventListener("mouseenter", function(e) {
-    //   document.getElementById("math-game").play();
-      
-    // });
   });
 
   
@@ -259,6 +255,12 @@ document.addEventListener("DOMContentLoaded", function(e) {
     document.getElementById("pick-one").play();
   });
 
+  document.querySelector("#go-back").addEventListener("click", function(e) {
+    e.stopPropagation();
+    hide2.style.display = "none";
+    hide3.style.display = "none";
+    hide1.style.display = "block";
+  })
   
   choices.addEventListener("click", function(e) {
     // after user clicks on type of math -  
@@ -324,7 +326,6 @@ document.addEventListener("DOMContentLoaded", function(e) {
     
   });
   
-  // pause for minimum of 3 seconds and move on to next question 
 
     // but if score reaches 50 display winning message
   
@@ -335,6 +336,8 @@ document.addEventListener("DOMContentLoaded", function(e) {
       newQuestion.style.display = "none";
       challenge.innerText = currentChallenge[currentQuestIndex].problem;
       document.getElementById("input").value = "";
+      // document.getElementById("input").autofocus;
+      // document.getElementById("attempt").autofocus;
     } else {
       newQuestion.style.display = "inline-block";
       console.log('bye')
@@ -347,15 +350,3 @@ document.addEventListener("DOMContentLoaded", function(e) {
 
 
 });
-
-// possible code to fit in as follows: 
-  
-// function nextQuestion() {
-//   if (currentQuestIndex < currentChallenge.length) {
-//     challenge.innerText = currentChallenge[currentQuestIndex].problem;
-//   }
-// }
-
-// then:
-
-// setTimeout(nextQuestion, 3000);

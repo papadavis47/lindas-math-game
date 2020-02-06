@@ -12,7 +12,7 @@ I want to create a math game for second / third graders. Using a flashcard type 
 
 ## My MVP
 
-The user will be able to choose whether to play with addition, subtraction, multiplication or division. Each one of these choices will have twenty different math problems on "flashcards".
+The user will be able to choose whether to play with addition, subtraction, multiplication or division. Each one of these choices will have ten different math problems on "flashcards".
 
 There will be a large message in the beginning that greets the user and there will be button or checkboxes to choose which type of math problem.
 
@@ -38,8 +38,6 @@ There is no "lose" condition - only communicating to the user if their answer is
 * Increase the number of math problems per "choice", multiplication, division, etc.
 
 * After the user types in the answer it will either display that the answer was correct or incorrect - then it will ask if they want to see the answer to the question. They can choose to see the answer or not.
-
-* Either way, there will be a button to click to move onto the next question.
 
 * Find a way to work with an API of some kind - in some way
 
