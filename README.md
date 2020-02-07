@@ -23,7 +23,7 @@ The game will display math problems and the user will type in the answer *(numbe
 There will be different sound depending on whether the user types in a correct answer.
 
 
-There will be a point system *( maybe 5 points per question)* where the user can earn 5 points per right answer and will decrement 5 points per wrong question. Once a certain number of points are earned *( maybe 50 points )* the user will win.
+There will be a point system *( maybe 5 points per question)* where the user can earn 5 points per correct answer and will decrement 5 points per wrong answer. Once a certain number of points are earned *( maybe 50 points )* the user will win.
 
 There is no "lose" condition - only communicating to the user if their answer is incorrect. 
 
