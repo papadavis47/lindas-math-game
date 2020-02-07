@@ -1,13 +1,33 @@
+![GeneralAssembly/Project 1](https://img.shields.io/badge/General%20Assembly-Project%201-%233742fa)
 ![Educational/Game](https://img.shields.io/badge/Educational-Game-9cf)
 
-# Basic Game Idea - "Linda's Math Game"
+# Linda's Math Game
 
-I want to create a math game for second / third graders. Using a flashcard type system, but with an interesting interface that engages learning.
+This is a math game for second / third graders. Using a flashcard type system with an interface that ( hopefullly ) engages learning.
 
 ## Tech Used
 
 * HTML5 & CSS
 * JavaScript
+
+# Mad Scientist Wire Frames
+
+## Initial Screen
+![Wire Frame 1](readmeimgs/project1w1.jpg)
+
+## Initial Game Concept
+![Wire Frame 2](readmeimgs/project1w2.jpg)
+
+# My Process
+I began with the initial ideas for the visual structure of the game and I consulted with my own children for what they liked in a learning game. 
+
+One of my initial ideas was to have sound, so over the weekend after project start I began recording voice over and building the html of the various transitions that the game goes through. It was the first time I had worked on a single page - by hiding and show divs and using javascript to switch between them. 
+
+The first draft of my CSS styling began on Sunday. On Monday I continued to work on CSS and began to build the javascript in small pieces to test out sound and transitions. On Tuesday and Wednesday I began working on the logic flow of the game - I recieved help from my instructors in how to do so - and began to think much more specifically. 
+
+After learning some more things about DOM manipulation and structuring code - I began to put the pieces together and slowly complete the javascript process.
+
+I learned a ton on this one.
 
 
 ## My MVP
@@ -18,7 +38,7 @@ There will be a large message in the beginning that greets the user and there wi
 
 The user will have a button to "start". On hover of the mouse over the start button - you will hear Linda Davis' voice saying: "You should do a math game." Then the user will see the first problem.
 
-The game will display math problems and the user will type in the answer *(number)* of the problem displayed on the flash card. The entire page will be fully responsive to different window sizes. With two different breakpoints from the regular window - medium window, small window.
+The game will display math problems and the user will type in the answer *(number)* of the problem displayed on the flash card. The entire page will be responsive to different window sizes.
 
 There will be different sound depending on whether the user types in a correct answer.
 
@@ -41,6 +61,15 @@ There is no "lose" condition - only communicating to the user if their answer is
 
 * Find a way to work with an API of some kind - in some way
 
+* Make a mobile version
+
+# External Sources
+
+* [Google Fonts](https://fonts.google.com/)
+* [Font Awesome](https://fontawesome.com/)
+* [Stack Overflow](https://stackoverflow.com/)
+* [Treehouse](https://www.teamtreehouse.com)
+* [FlatUI Colors](https://flatuicolors.com/)
 
 
  
