@@ -340,7 +340,7 @@ form {
 
 /*-----------------------------Media Queries --------------------------------*/
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 950px) {
 
 h1 {
   font-size: 32px;
@@ -398,6 +398,10 @@ h2 {
 #linda {
   height: 500px;
   width: 500px;
+}
+
+a {
+  font-size: 16px;
 }
 
 }
