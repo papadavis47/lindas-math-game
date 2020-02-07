@@ -5,6 +5,8 @@
 
 This is a math game for second / third graders. It uses a flashcard type system with an interface that ( hopefullly ) engages learning.
 
+[Click Here to Play  :)](https://papadavis47.github.io/lindas-math-game/.)
+
 ## Tech Used
 
 * HTML5 & CSS
