@@ -3,32 +3,20 @@
 
 # Linda's Math Game
 
-This is a math game for second / third graders. Using a flashcard type system with an interface that ( hopefullly ) engages learning.
+This is a math game for second / third graders. It uses a flashcard type system with an interface that ( hopefullly ) engages learning.
 
 ## Tech Used
 
 * HTML5 & CSS
 * JavaScript
 
-# Mad Scientist Wire Frames
+# Mad Scientist Initial Wire Frames
 
 ## Initial Screen
 ![Wire Frame 1](readmeimgs/project1w1.jpg)
 
 ## Initial Game Concept
 ![Wire Frame 2](readmeimgs/project1w2.jpg)
-
-# My Process
-I began with the initial ideas for the visual structure of the game and I consulted with my own children for what they liked in a learning game. 
-
-One of my initial ideas was to have sound, so over the weekend after project start I began recording voice over and building the html of the various transitions that the game goes through. It was the first time I had worked on a single page - by hiding and show divs and using javascript to switch between them. 
-
-The first draft of my CSS styling began on Sunday. On Monday I continued to work on CSS and began to build the javascript in small pieces to test out sound and transitions. On Tuesday and Wednesday I began working on the logic flow of the game - I recieved help from my instructors in how to do so - and began to think much more specifically. 
-
-After learning some more things about DOM manipulation and structuring code - I began to put the pieces together and slowly complete the javascript process.
-
-I learned a ton on this one.
-
 
 ## My MVP
 
@@ -46,6 +34,18 @@ There will be different sound depending on whether the user types in a correct a
 There will be a point system *( maybe 5 points per question)* where the user can earn 5 points per correct answer and will decrement 5 points per wrong answer. Once a certain number of points are earned *( maybe 50 points )* the user will win.
 
 There is no "lose" condition - only communicating to the user if their answer is incorrect. 
+
+# My Process
+I began with the initial ideas for the visual structure of the game and I consulted with my own children for what they liked in a learning game. 
+
+One of my initial ideas was to have sound, so over the weekend after project start I began recording voice over and building the HTML structure of the various transitions in the game. It was the first time I had worked on a single page that hides and shows content using javascript event listeners. 
+
+The first draft of my CSS styling began on Sunday. On Monday I continued to work on CSS and I began to build the javascript in small pieces in order to test out sound and transitions. On Tuesday and Wednesday I began coding the logic flow of the game. I recieved help from my instructors in how to do so. They showed me the importance of writing pseudo code much more specifically than I had been doing previously. 
+
+After learning some more things about DOM manipulation and structuring code - I began to put the pieces together and slowly complete the javascript process.
+
+I have learned a ton through this entire process.
+
 
 ## Stretch Goals
 

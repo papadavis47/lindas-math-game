@@ -1,6 +1,4 @@
-/* * {
-  box-sizing: border-box;
-} */
+
 
 /* ---------------------------------- Elements --------------------------------------*/
 
@@ -237,8 +235,7 @@ form {
 .challenge {
   padding-top: .75rem;
   font-size: 4rem;
-  
-  
+   
 
 }
 
@@ -316,13 +313,6 @@ form {
   margin-top: 40px;
 }
 
- /* .wrapper-about {
-  min-height: 100%;
-  height: auto !important;
-  height: 100%;
-  margin: 0 auto -100px; 
- }
-  */
  .footer, .push {
   height: 100px; 
 } 
@@ -346,4 +336,68 @@ form {
   width: 70%;
   text-align: justify;
   margin: 0 auto;
+}
+
+/*-----------------------------Media Queries --------------------------------*/
+
+@media screen and (max-width: 900px) {
+
+h1 {
+  font-size: 32px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+#hide-1 {
+  height: 500px;
+}
+
+.directions p {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1em;
+}
+
+.choices p {
+  text-align: center;
+  padding-top: 2rem;
+  font-size: 20px;
+  color: white;
+  font-weight: bold;
+}
+
+
+.choice {
+  font-size: 48px;
+  display: inline;
+  cursor: pointer;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+#calculator {
+  font-size: 2em;
+  display: inline-block;
+  margin-right: 1em;
+}
+
+#computer {
+  font-size: 2em;
+  display: inline-block;
+  margin-left: 1em;
+}
+
+.challenge {
+  padding-top: .75rem;
+  font-size: 3rem;
+  
+}
+
+#linda {
+  height: 500px;
+  width: 500px;
+}
+
 }
